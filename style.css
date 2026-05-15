@@ -1,6 +1,8 @@
+/* prerequisites */
 * {
     margin: 0;
     padding: 0;
+    user-select: none;
     box-sizing: border-box;
 }
 
@@ -10,11 +12,15 @@ body {
     min-height: 100%;
 }
 
+/* code starts from here  */
+
 body {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/* header section */
 
 header {
     width: 85%;
@@ -124,6 +130,8 @@ section.navbar button:hover {
     color: white;
 }
 
+/* main starts from here  */
+
 main {
     min-height: 100vh;
     width: 87%;
@@ -135,6 +143,8 @@ main {
 
 }
 
+/* section heading */
+
 section.heading {
     width: 100%;
     min-height: 80vh;
@@ -143,7 +153,7 @@ section.heading {
 section.heading h1 {
     margin-top: 9rem;
     font-weight: 500;
-    line-height: 4.5rem;
+    line-height: 4.6rem;
     font-family: sans-serif;
     font-size: 5rem;
 }
@@ -163,11 +173,326 @@ section.heading button {
     border-radius: 25px;
     font-size: 13px;
 }
-marquee{
+
+/* marquee effect images */
+
+.images {
     width: 100%;
-    white-space: nowrap;
     height: 8.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
-marquee img{
-    margin: 3rem 3rem;
+
+.marquee-track {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    animation: scroll-left 20s linear infinite;
+}
+
+.marquee-track img {
+    height: 2rem;
+    margin: 0 3rem;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* section one begin here */
+
+section.one {
+    width: 100%;
+    height: 18rem;
+    display: grid;
+    gap: 2rem;
+    margin: 1rem 0 3rem 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 3rem 3rem 0 2rem;
+    background-color: #F4F4F5;
+}
+
+.container h1 {
+    font-size: 1.8vw;
+    font-weight: 500;
+}
+
+.container p {
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    color: #52525C;
+}
+
+.container a {
+    color: black;
+    font-size: 0.8rem;
+}
+
+/* section work starts from here */
+
+section.work {
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.small-heading {
+    font-size: 0.7rem;
+    padding: 0.8rem 0;
+    color: #52525C;
+    border-bottom: 0.1px solid rgb(228, 228, 231);
+}
+
+.big-heading {
+    height: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.big-heading h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+.big-heading button {
+    font-family: serif;
+    padding: 0.6rem 0.8rem;
+    border: 0.5px solid black;
+    color: black;
+    background-color: transparent;
+    border-radius: 25px;
+    font-size: 12.5px;
+}
+
+.work-space {
+    min-height: 150vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.6rem;
+}
+
+.work-containers {
+    height: 100%;
+    width: 100%;
+}
+
+.work-img {
+    width: 100%;
+    height: 89%;
+    overflow: hidden;
+}
+
+.work-containers img {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+    cursor: pointer;
+}
+
+.work-containers img:hover {
+    transform: scale(1.15);
+}
+
+.work-details {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.work-details h6 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.work-details button {
+    font-family: serif;
+    padding: 0.3rem 0.5rem;
+    border: 0.5px solid black;
+    color: black;
+    background-color: transparent;
+    border-radius: 25px;
+    font-size: 11px;
+}
+
+.work-details button:hover {
+    color: white;
+    background-color: black;
+}
+
+/* our values section is on the way */
+
+section.our-values {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.value-container {
+    margin: 3.5rem 0;
+    min-height: 105vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "box1 box2 box3 ."
+        ". box4 box5 box6";
+    gap: 2rem;
+}
+
+.value-box {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 2.5rem 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.value-box p {
+    font-size: 12px;
+}
+
+.value-box h5 {
+    margin-top: -3.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.value-box h6 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.value-box button {
+    width: fit-content;
+    padding: 0.9rem 1.5rem;
+    border: none;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    font-family: serif;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.value-box button img {
+    color: white;
+    width: 12px;
+    height: 12px;
+}
+
+/* crafting section starts from here  */
+
+section.crafting {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0 3rem 0;
+    gap: 2rem;
+}
+
+section.crafting h1 {
+    margin-left: -6rem;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+section.crafting p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    color: #52525C;
+}
+
+section.crafting div {
+    min-height: fit-content;
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* our team section begin here */
+
+section.our-team {
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.team-det {
+    width: 100%;
+    min-height: 60vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    align-items: start;
+}
+
+.team-container {
+    width: 100%;
+    height: 24rem;
+}
+
+.team-img {
+    width: 100%;
+    height: 88%;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+}
+.det-logo{
+    position: absolute;
+    height: 2rem;
+    display: none;
+    bottom: -2rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.2rem;
+    transition-duration: 0.4s;
+    justify-content: space-around;
+
+}
+.det-logo button{
+    height: 1.8rem;
+    width: 1.8rem;
+    border-radius: 50%;
+    border: none;
+    overflow: hidden;
+}
+.det-logo button img{
+    height: 100%;
+    width: 100%;
+}
+.team-img:hover{
+    .det-logo{
+        display: flex;
+        bottom: 0.6rem;
+    }
 }
